@@ -14,7 +14,7 @@ const TodoList = () => {
     }
 
     const makeTodos = todos.map(todo =>
-        <Todo task='Make pizza'/>
+        <Todo key={todo.id} id={todo.id} task={todo.task} handleRemove={removeTodo}/>
     )
 
     return(

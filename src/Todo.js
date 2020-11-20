@@ -1,6 +1,8 @@
-const Todo = ({task}) => {
+const Todo = ({task, handleRemove, id}) => {
+    const remove = () => handleRemove(id);
+
     return(
-    <li>{task}</li>
+    <li>{task}<button onClick={remove}>x</button></li>
     )
 }
 
