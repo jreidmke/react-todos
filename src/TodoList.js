@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Todo from './Todo';
+import TodoForm from './TodoForm';
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
@@ -15,10 +16,10 @@ const TodoList = () => {
     const makeTodos = todos.map(todo =>
         <Todo task='Make pizza'/>
     )
-    
+
     return(
         <div>
-            <button onClick={addTodo}>Remind yourself to make pizza</button>
+            <TodoForm createTodo={addTodo}/>
             {makeTodos}
         </div>
     )
